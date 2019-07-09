@@ -1,7 +1,7 @@
 - name: copy gitlab docker files
   copy: src=gitlab.tar dest=/root
 - name: load gitlab image
-  command: docker load < /root/gitlab.tar
+  command: docker load -i /root/gitlab.tar
 - name: run gitlab container
   command: docker run --name gitlab -d -p {{gitlab_listen_port}}:80
            -p {{gitlab_shell_ssh_port}}:22 --env GITLAB_OMNIBUS_CONFIG="external_url '{{gitlab_external_url}}';
