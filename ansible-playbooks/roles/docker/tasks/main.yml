@@ -1,0 +1,4 @@
+- name: copy docker dependies files
+  copy: src=deploy-docker dest=/root
+- name: install docker
+  command: /usr/bin/bash /root/deploy-docker/install.sh

@@ -1,0 +1,4 @@
+gitlab_listen_port: 80
+gitlab_shell_ssh_port: 1022
+gitlab_external_url: "http://192.168.33.29"
+gitlab_volume: "/root/gitlab_volume"
