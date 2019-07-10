@@ -2,3 +2,11 @@
   roles:
     - docker
     - gitlab
+- hosts: jenkins
+  roles: 
+    - docker
+    - jenkins
+- hosts: nexus
+  roles: 
+    - docker
+    - nexus

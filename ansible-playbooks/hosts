@@ -1,2 +1,6 @@
 [gitlab]
 192.168.33.29 ansible_ssh_user=root ansible_ssh_pass=vagrant
+[jenkins]
+192.168.33.30 ansible_ssh_user=root ansible_ssh_pass=vagrant
+[nexus]
+192.168.33.31 ansible_ssh_user=root ansible_ssh_pass=vagrant
