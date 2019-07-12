@@ -1,0 +1,8 @@
+- name: copy nexus3 docker image files
+  copy: src=nexus3.tar dest=/root
+- name: load nexus3 image
+  command: docker load -i /root/nexus3.tar
+- name: run nexus3 container
+  command: docker run -d --name nexus -u root --restart=always -p {{nexus_hub_port}}:5000 -p {{nexus_listen_port}}:8081 -v {{nexus_datadir}}:/nexus-data  sonatype/nexus3
+- name: clean images files
+  command: rm-rf /root/nexus3.tar
