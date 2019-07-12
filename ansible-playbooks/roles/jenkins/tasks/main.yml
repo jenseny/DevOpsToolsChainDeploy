@@ -1,0 +1,8 @@
+- name: copy jenkins docker image files
+  copy: src=jenkins.tar dest=/root
+- name: load jenkins image
+  command: docker load -i /root/jenkins.tar
+- name: run jenkins container
+  command: docker run --name jenkins -u root  -d -v {{jenkins_datadir}}:/var/jenkins_home  -p {{jenkins_port}}:8080  jenkins/jenkins 
+- name: clean images files
+  command: rm-rf /root/jenkins.tar

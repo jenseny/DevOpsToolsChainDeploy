@@ -2,3 +2,10 @@ gitlab_listen_port: 80
 gitlab_shell_ssh_port: 1022
 gitlab_external_url: "http://192.168.33.29"
 gitlab_volume: "/root/gitlab_volume"
+
+jenkins_datadir: "/opt/jenkins/data"
+jenkins_port: 8080
+
+nexus_datadir: "/opt/nexus/data"
+nexus_listen_port: 8081
+nexus_hub_port: 5000
